@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+    <servlet>
+        <servlet-name>WxServlet</servlet-name>
+        <servlet-class>com.cyrstal.wx.web.servlet.WxServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>WxServlet</servlet-name>
+        <url-pattern>/WxServlet.action</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>AccessTokenServlet</servlet-name>
+        <servlet-class>com.cyrstal.wx.web.servlet.AccessTokenServlet</servlet-class>
+        <init-param>
+            <param-name>appId</param-name>
+            <param-value>wx486e512fb0732e04</param-value>
+        </init-param>
+        <init-param>
+            <param-name>appSecret</param-name>
+            <param-value>febbc1884ec9dc434a1f0a082462fc65</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>AccessTokenServlet</servlet-name>
+        <url-pattern>/AccessTokenServlet.action</url-pattern>
+    </servlet-mapping>
+</web-app>
